@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_margin="@dimen/_7sdp"
+        android:elevation="0dp"
+        app:cardCornerRadius="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/white"
+        android:innerRadius="0dp"
+        android:thicknessRatio="1.9">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true">
+        </ImageView>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_cate_name"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="Smart TV &amp; Android TV"
+        android:textSize="@dimen/_7sdp"/>
+
+</RelativeLayout>

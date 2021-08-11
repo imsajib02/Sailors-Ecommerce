@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="splashTime">2000</integer>
+    <integer name="minPrice">1</integer>
+    <integer name="maxPrice">5000000</integer>
+</resources>

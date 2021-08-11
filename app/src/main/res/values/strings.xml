@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">Sailor\'s Express</string>
+
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="fav">WishList</string>
+    <string name="profile">Profile</string>
+
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <string name="bdt_sign">৳</string>
+
+    <string name="ok">Okay</string>
+
+    <string name="warning">Warning</string>
+    <string name="need_to_login">You need to login first. Would you like to login now?</string>
+
+    <string name="phone_email">phone or email</string>
+    <string name="password">password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+
+    <string name="register_pg_one_desc">Enter your phone number. We will send an OTP code to your phone.</string>
+    <string name="phone">phone number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="is_this_your_phone">- is this your phone number?</string>
+
+    <string name="enter_phone">Enter phone number</string>
+    <string name="invalid_phone">Invalid phone number</string>
+
+    <string name="phone_verification_failed">Phone verification failed. Try again.</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="limit_exceed">Daily OTP limit exceeded</string>
+    <string name="check_phone">Check your phone number</string>
+
+    <string name="not_connected">Not connected to the internet</string>
+    <string name="no_active_connection">Internet connection is not active</string>
+
+    <string name="code_sent_to">A verification code has been sent to the phone number +88</string>
+    <string name="enter_the_code">Enter the code below for verification.</string>
+    <string name="verify">Verify</string>
+    <string name="didnt_get_code">Didn\'t get code?</string>
+    <string name="resend_code">Resend code</string>
+    <string name="in">in</string>
+    <string name="sec">sec</string>
+
+    <string name="enter_code">Enter phone number</string>
+    <string name="must_length_6">Code must be 6 digits long</string>
+
+    <string name="no_offers">No Offers</string>
+    <string name="feat_category">Featured category</string>
+    <string name="our_shops">Our shops</string>
+    <string name="our_brands">Our brands</string>
+    <string name="top_selling">Top selling products</string>
+    <string name="feat_products">Featured products</string>
+    <string name="new_arrival">New arrivals</string>
+    <string name="see_all">See all</string>
+    <string name="buy_now">Buy now</string>
+    <string name="stock_out">Out of stock</string>
+
+    <string name="categories">Categories</string>
+
+    <string name="oops">Oops!</string>
+    <string name="you_are_not_connected">You are not connected to the internet. Please turn on wifi/mobile data and try again.</string>
+    <string name="you_connection_inactive">You internet connection is not working properly. Please check your connection and try again.</string>
+    <string name="could_not_load_data">Could not load data. Please try again.</string>
+    <string name="timed_out">Connection timed out. Please try again.</string>
+    <string name="try_again">Try again</string>
+
+    <string name="filter">Filter</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="search">Search</string>
+
+    <string name="brands">Brands</string>
+    <string name="shops">Shops</string>
+
+    <string name="add_to_cart">Add to cart</string>
+    <string name="stocks_available">Stocks available :</string>
+    <string name="size">Size :</string>
+    <string name="vat_app">vat applicable</string>
+    <string name="description">Description</string>
+    <string name="product_details">Product details</string>
+    <string name="brand">Brand</string>
+    <string name="category">Category</string>
+    <string name="subcategory">Subcategory</string>
+    <string name="sku">SKU</string>
+    <string name="free_delivery">Free delivery</string>
+    <string name="featured">Featured</string>
+    <string name="new_arrival_1">New arrival</string>
+    <string name="top_selling_1">Top selling</string>
+    <string name="similar_products">Similar products</string>
+    <string name="added_to_cart">Product added to cart</string>
+
+    <string name="top_sheet_behavior" translatable="false">com.b2gsoft.sailorsexpress.topsheet.TopSheetBehavior</string>
+
+    <string name="products">Products</string>
+    <string name="sort_by">Sort By</string>
+    <string name="price">Price</string>
+    <string name="search_for">Search For</string>
+    <string name="relevance">Relevance</string>
+    <string name="low_2_high">Price: Low to high</string>
+    <string name="high_2_low">Price: High to low</string>
+    <string name="filter_by_price">Filter by Price Range</string>
+    <string name="min">Minimum</string>
+    <string name="max">Maximum</string>
+    <string name="under_1k">Under ৳1000</string>
+    <string name="zero_to_1k">৳0 - ৳1000</string>
+    <string name="from_1k_to_10k">৳1000 - ৳10000</string>
+    <string name="from_10k_to_50k">৳10000 - ৳50000</string>
+    <string name="from_50k_to_250k">৳50000 - ৳250000</string>
+    <string name="from_250k_to_5m">৳250000 - ৳5000000</string>
+    <string name="above_10k">Above ৳10000</string>
+    <string name="clear_filter">Clear Filter</string>
+    <string name="apply">Apply</string>
+
+    <string name="size_sort">Size</string>
+    <string name="show_result">Show Result</string>
+
+    <string name="coupon_code">Coupon Code</string>
+    <string name="items">Items</string>
+    <string name="item">item</string>
+    <string name="no_items">No Items</string>
+    <string name="sub_total">Subtotal</string>
+    <string name="total">Total</string>
+    <string name="discount">Discount</string>
+    <string name="delivery_charge">Delivery Charge</string>
+    <string name="vat">Vat</string>
+    <string name="zero">৳0.0</string>
+    <string name="proceed_2_checkout">Proceed to checkout</string>
+
+    <string name="select_items_2_delete">Select items to remove</string>
+    <string name="failed_2_remove">Failed to remove</string>
+    <string name="items_removed">Items removed from cart</string>
+    <string name="item_removal_confirmation">Are you sure to remove selected items from cart?</string>
+
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+
+    <string name="delivery">Delivery</string>
+    <string name="select_delivery_loc">Select delivery location</string>
+    <string name="first_name">First name</string>
+    <string name="country">Country</string>
+    <string name="address">Address</string>
+    <string name="town_city">Town / City</string>
+    <string name="postcode">Post code</string>
+    <string name="email">Email</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="note">Additional note</string>
+    <string name="use_as_billing_address">Use as Billing address</string>
+    <string name="select_billing_location">Select Billing Address</string>
+    <string name="set_delivery_location">Set Delivery Location</string>
+    <string name="set_location_on_map">Set your desired delivery location by scrolling the map.</string>
+    <string name="location">Location</string>
+    <string name="submit">Submit</string>
+    <string name="move_pin">Move pin</string>
+    <string name="location_permission_needed">Without location permission some feature may not work properly. Please grant location permission from settings.</string>
+</resources>

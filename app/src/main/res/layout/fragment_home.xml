@@ -1,0 +1,502 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:background="#F1F1F1"
+    tools:context="com.b2gsoft.sailorsexpress.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:background="@color/grey_10"
+        android:layout_height="@dimen/_40sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/menu_new"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/slider_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_125sdp">
+
+                <ImageView
+                    android:id="@+id/img_no_offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:background="@drawable/no_offer"
+                    android:visibility="gone" />
+
+                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:shimmer_demo_child_count="1"
+                    android:visibility="gone"
+                    app:shimmer_demo_layout_manager_type="linear_horizontal"
+                    app:shimmer_demo_shimmer_color="#F7F5F5" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/slider_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/loading_gif"/>
+
+                <me.relex.circleindicator.CircleIndicator2
+                    android:id="@+id/circle_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    app:ci_drawable="@drawable/whitedot"
+                    app:ci_drawable_unselected="@drawable/darkdot"
+                    app:ci_height="@dimen/_5sdp"
+                    app:ci_width="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/feat_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slider_container"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/ft_cate_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="@string/feat_category"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ft_cat_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/see_all"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/detail_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_feat_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feat_category"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:shimmer_demo_angle="30"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_duration="1000"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/feat_category_shimmer"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+            <RelativeLayout
+                android:id="@+id/our_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_feat_cat"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/our_brand_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/our_brands"
+                    android:gravity="center"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/brand_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/see_all"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/detail_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_our_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/our_brand"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:shimmer_demo_angle="30"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_duration="1000"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/our_brand_shimmer"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+            <RelativeLayout
+                android:id="@+id/our_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_our_brand"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/our_shop_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/our_shops"
+                    android:gravity="center"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/shop_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/see_all"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/detail_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_our_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/our_shop"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:shimmer_demo_angle="30"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_duration="1000"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/our_brand_shimmer"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+            <RelativeLayout
+                android:id="@+id/top_selling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_our_shop"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/top_sell_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:text="@string/top_selling"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/top_sell_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/see_all"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/detail_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_top_selling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_selling"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:nestedScrollingEnabled="false"
+                app:shimmer_demo_angle="30"
+                app:shimmer_demo_child_count="4"
+                app:shimmer_demo_duration="1000"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout_manager_type="grid"
+                app:shimmer_demo_layout="@layout/product_shimmer"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+            <RelativeLayout
+                android:id="@+id/feat_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_top_selling"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/ft_product_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/feat_products"
+                    android:gravity="center"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/feat_product_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/see_all"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/detail_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_feat_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feat_product"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:nestedScrollingEnabled="false"
+                app:shimmer_demo_angle="30"
+                app:shimmer_demo_child_count="8"
+                app:shimmer_demo_duration="1000"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout_manager_type="grid"
+                app:shimmer_demo_layout="@layout/product_shimmer"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+            <RelativeLayout
+                android:id="@+id/new_arrival"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_feat_product"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/new_arrival_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/new_arrival"
+                    android:gravity="center"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/new_arrival_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/see_all"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/detail_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_new_arrival"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_arrival"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:nestedScrollingEnabled="false"
+                app:shimmer_demo_angle="30"
+                app:shimmer_demo_child_count="6"
+                app:shimmer_demo_duration="1000"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout_manager_type="grid"
+                app:shimmer_demo_layout="@layout/product_shimmer"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/container_not_connected"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/header"
+        android:visibility="gone"
+        layout="@layout/not_connected_layout"/>
+
+</RelativeLayout>
